@@ -5,6 +5,7 @@ public class MawScript : MonoBehaviour
     public Transform leftTarget;
     public Transform rightTarget;
     public Rigidbody rigidbody;
+    public AttackTrigger trigger;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,7 +18,7 @@ public class MawScript : MonoBehaviour
 
     public void Chomp()
     {
-
+        trigger.AttackAll();
     }
     public void Dash()
     {

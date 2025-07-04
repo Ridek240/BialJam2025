@@ -1,12 +1,12 @@
 using System;
 using UnityEngine;
 
-public interface IHittable
+public abstract class IHittable : MonoBehaviour
 {
 
     public abstract GameObject OnHit();
-    public abstract GameObject Damage();
+    public abstract void Damage();
 
-    public event Action TellIWasKidnapped;
+    public abstract event Action TellIWasKidnapped;
 
 }

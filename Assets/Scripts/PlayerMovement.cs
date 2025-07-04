@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Head;
     public JawsScript Jaws;
     public MawScript Maw;
-
+    public float rotateSpeed = 5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,8 +23,13 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 move = new Vector3(MovementVector.x, 0, MovementVector.y);
         if(move != Vector3.zero) 
-        { 
-            transform.rotation = Quaternion.LookRotation(move);
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(move);
+            transform.rotation = Quaternion.RotateTowards(
+                transform.rotation,
+                targetRotation,
+                rotateSpeed * Time.fixedDeltaTime
+            );
         }
         controller.linearVelocity = (move) * speed;
     }
@@ -50,4 +55,10 @@ public class PlayerMovement : MonoBehaviour
     {
         Maw.Dash();
     }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        Maw.Chomp();
+    }
+
 }

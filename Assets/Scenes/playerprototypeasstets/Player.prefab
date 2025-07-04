@@ -285,7 +285,19 @@ MonoBehaviour:
     m_ActionId: 6c2ab1b8-8984-453a-af3d-a3c78ae1679a
     m_ActionName: 'Player/Attack[/DualShock4GamepadHID1/buttonWest,/XInputControllerWindows/buttonWest,/Mouse/leftButton,/Keyboard/enter]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1827297973893065046}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 852140f2-7766-474d-8707-702459ba45f3
     m_ActionName: 'Player/Interact[/Keyboard/e,/DualShock4GamepadHID1/buttonNorth,/XInputControllerWindows/buttonNorth]'
   - m_PersistentCalls:
@@ -382,6 +394,7 @@ MonoBehaviour:
   Head: {fileID: 277562267689872989}
   Jaws: {fileID: 3109127481854607807}
   Maw: {fileID: 0}
+  rotateSpeed: 500
 --- !u!54 &6232745662337247064
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -843,7 +856,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1299
+  m_VersionIndex: 1323
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1195,7 +1208,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 188
+  m_VersionIndex: 212
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1424,3 +1437,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4edc3c0961f8b0e499bb0114c89f1e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hittablesInRange: []

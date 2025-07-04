@@ -1,16 +1,17 @@
 using System;
 using UnityEngine;
 
-public class ChildHibox : MonoBehaviour, IHittable
+public class ChildHibox : IHittable
 {
-    public event Action TellIWasKidnapped;
+    public override event Action TellIWasKidnapped;
 
-    public GameObject Damage()
+    public override void Damage()
     {
-        throw new NotImplementedException();
+        TellIWasKidnapped?.Invoke();
+        Destroy(gameObject);
     }
 
-    public GameObject OnHit()
+    public override GameObject OnHit()
     {
         TellIWasKidnapped?.Invoke();
         return this.gameObject;

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AttackTrigger : MonoBehaviour
 {
-    private List<IHittable> hittablesInRange = new List<IHittable>();
+    public List<IHittable> hittablesInRange = new List<IHittable>();
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,6 +25,7 @@ public class AttackTrigger : MonoBehaviour
 
     public GameObject TryHitFirst()
     {
+        hittablesInRange.RemoveAll(item => item == null);
         if (hittablesInRange.Count > 0)
         {
             var target = hittablesInRange[0];
@@ -37,6 +38,7 @@ public class AttackTrigger : MonoBehaviour
     }
     public void AttackAll()
     {
+        hittablesInRange.RemoveAll(item => item == null);
         foreach (var hittable in hittablesInRange)
         {
             hittable.Damage();
