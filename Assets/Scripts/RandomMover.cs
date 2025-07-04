@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class RandomMover : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed = 1f;
     private Rigidbody rb;
 
     private void Start()

@@ -3,8 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class RoombaMover : MonoBehaviour
 {
-    public float speed = Random.Range(1, 5);
-    public float changeDirectionInterval = 1f;
+    public float speed = 1f;
+    public float changeDirectionInterval = 2f; // co ile sekund zmienia kierunek
 
     private Rigidbody rb;
     private Vector3 moveDirection;
@@ -32,7 +32,7 @@ public class RoombaMover : MonoBehaviour
 
     private void ChooseRandomDirection()
     {
-        int dir = Random.Range(0, 4);
+        int dir = Random.Range(0, 4); // 0, 1, 2, 3
 
         switch (dir)
         {
@@ -45,9 +45,10 @@ public class RoombaMover : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Odbijamy kierunek po kolizji
+        // Odbijamy kierunek po kolizji ze ścianą
         Vector3 normal = collision.contacts[0].normal;
 
+        // Sprawdzamy, czy poruszaliśmy się w X czy Z
         if (Mathf.Abs(moveDirection.x) > 0.1f)
             moveDirection = new Vector3(-moveDirection.x, 0f, 0f);
         else if (Mathf.Abs(moveDirection.z) > 0.1f)
