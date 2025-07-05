@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : PlayerBase
 {
     public Vector2 MovementVector;
     public float speed = 5.0f;

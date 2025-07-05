@@ -11,6 +11,11 @@ public class ChildHibox : IHittable
         Destroy(gameObject);
     }
 
+    public override void Drop()
+    {
+        TellIWasKidnapped?.Invoke();
+    }
+
     public override GameObject OnHit()
     {
         TellIWasKidnapped?.Invoke();

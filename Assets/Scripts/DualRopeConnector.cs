@@ -26,7 +26,7 @@ public class DualRopeConnector : MonoBehaviour
         joint.maxDistance = ropeLength;
         joint.spring = spring;
         joint.damper = damper;
-        joint.enableCollision = false;
+        joint.enableCollision = true;
     }
 }
 

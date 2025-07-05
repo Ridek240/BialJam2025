@@ -40,7 +40,8 @@ public class JawsScript : MonoBehaviour
             animator.SetBool("Jaws", Activate);
             if(Target!=null)
             {
-                Target.GetComponent<IHittable>().TellIWasKidnapped -= TheChildWasTaken;
+
+                Target.GetComponent<IHittable>().Drop();
                 Target = null;
             }
         }

@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class MawScript : MonoBehaviour
+public class MawScript : PlayerBase
 {
     public Transform leftTarget;
     public Transform rightTarget;
-    public Rigidbody rigidbody;
+    public Rigidbody Rigidbody;
     public AttackTrigger trigger;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,8 +33,8 @@ public class MawScript : MonoBehaviour
         Vector3 dashDirection = transform.forward;
 
         // Resetuj pr�dko�� i dodaj si�� (impuls)
-        rigidbody.linearVelocity = Vector3.zero;
-        rigidbody.AddForce(dashDirection * dashForce, ForceMode.Impulse);
+        Rigidbody.linearVelocity = Vector3.zero;
+        Rigidbody.AddForce(dashDirection * dashForce, ForceMode.Impulse);
     }
     void Update()
     {
