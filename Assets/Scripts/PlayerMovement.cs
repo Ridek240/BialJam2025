@@ -31,6 +31,17 @@ public class PlayerMovement : PlayerBase
             );
         }
         controller.linearVelocity = (move) * speed;
+
+
+        if(Throwing)
+        {
+            Power += 500 * Time.fixedDeltaTime;
+            Power = Mathf.Clamp(Power, 0, 5000);
+            if(!Jaws.HasTarget())
+            {
+                Throwing = false;
+            }
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -38,7 +49,7 @@ public class PlayerMovement : PlayerBase
         MovementVector = context.ReadValue<Vector2>();
     }
 
-    public void OnAttack(InputAction.CallbackContext context)
+    public void OnJaws(InputAction.CallbackContext context)
     {
         if(context.performed)
         {
@@ -50,14 +61,41 @@ public class PlayerMovement : PlayerBase
         }
     }
 
-    public void OnSprint(InputAction.CallbackContext context)
+    public void OnDash(InputAction.CallbackContext context)
     {
         Maw.Dash();
     }
 
-    public void OnInteract(InputAction.CallbackContext context)
+    public void OnMaw(InputAction.CallbackContext context)
     {
         Maw.Chomp();
     }
 
+
+    //throwing Childern
+
+    [Header("Throwing Children")]
+    public float Power;
+    public bool Throwing;
+
+    public void OnThrow(InputAction.CallbackContext context)
+    {
+        if (Jaws.HasTarget())
+        {
+            if (context.performed)
+            {
+                Power = 0;
+                Throwing = true;
+            }
+            if (context.canceled)
+            {
+                if (Throwing)
+                {
+                    Jaws.ThrowChild(Power);
+                }
+                Throwing = false;
+
+            }
+        }
+    }
 }

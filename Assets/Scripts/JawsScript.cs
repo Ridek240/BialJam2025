@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class JawsScript : MonoBehaviour
@@ -47,6 +48,11 @@ public class JawsScript : MonoBehaviour
         }
     }
 
+    public bool HasTarget()
+    {
+        return Target != null;
+    }
+
     private void TryHit()
     {
         Target = trigger.TryHitFirst();
@@ -56,5 +62,11 @@ public class JawsScript : MonoBehaviour
     {
         Target.GetComponent<IHittable>().TellIWasKidnapped -= TheChildWasTaken;
         Target = null;
+    }
+
+    public void ThrowChild(float strength)
+    {
+        Target.GetComponent<Rigidbody>().AddForce(attackOrigin.forward * strength);
+        Jaws(false);
     }
 }

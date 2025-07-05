@@ -4,7 +4,6 @@ using UnityEngine;
 public class ChildHibox : IHittable
 {
     public override event Action TellIWasKidnapped;
-
     public override void Damage()
     {
         TellIWasKidnapped?.Invoke();
