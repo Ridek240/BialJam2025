@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MawScript : PlayerBase
 {
@@ -6,6 +7,7 @@ public class MawScript : PlayerBase
     public Transform rightTarget;
     public Rigidbody Rigidbody;
     public AttackTrigger trigger;
+    public UnityEvent ChompDone;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,6 +20,7 @@ public class MawScript : PlayerBase
 
     public void Chomp()
     {
+        ChompDone?.Invoke();
         trigger.AttackAll();
     }
     public void Dash()
@@ -27,8 +30,6 @@ public class MawScript : PlayerBase
 
     void StartDash()
     {
-
-
         // Kierunek dasha � np. prz�d obiektu
         Vector3 dashDirection = transform.forward;
 

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class JawsScript : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class JawsScript : MonoBehaviour
     public Transform attackOrigin;
 
     public AttackTrigger trigger;
+
+    public UnityEvent JawsClosed;
+    public UnityEvent ChildThrown;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,6 +38,7 @@ public class JawsScript : MonoBehaviour
         if(Activate)
         {
             animator.SetBool("Jaws",Activate);
+            JawsClosed?.Invoke();
             TryHit();
         }
         if (!Activate)
@@ -67,6 +72,7 @@ public class JawsScript : MonoBehaviour
     public void ThrowChild(float strength)
     {
         Target.GetComponent<Rigidbody>().AddForce(attackOrigin.forward * strength);
+        ChildThrown?.Invoke();
         Jaws(false);
     }
 }

@@ -400,6 +400,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 34444cb1-b110-4a1a-a6ea-0d31cf15a9c5
     m_ActionName: 'Player/Dash[/DualShock4GamepadHID/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 12efbcc9-4e3d-4404-b0cc-bce10246a96b
+    m_ActionName: 'UI/Escape[/Keyboard/escape,/DualShock4GamepadHID/start]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
@@ -571,6 +575,8 @@ GameObject:
   - component: {fileID: 1288899824304935053}
   - component: {fileID: 9196337675147577638}
   - component: {fileID: 3109127481854607807}
+  - component: {fileID: 7205952859829632912}
+  - component: {fileID: 7221471127556741058}
   m_Layer: 6
   m_Name: pincirHead
   m_TagString: Untagged
@@ -638,6 +644,73 @@ MonoBehaviour:
     m_Bits: 55
   attackOrigin: {fileID: 6096054794588015748}
   trigger: {fileID: 5420367125238847053}
+  JawsClosed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7205952859829632912}
+        m_TargetAssemblyTypeName: SoundList, Assembly-CSharp
+        m_MethodName: PlayRandomSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ChildThrown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7221471127556741058}
+        m_TargetAssemblyTypeName: SoundList, Assembly-CSharp
+        m_MethodName: PlayRandomSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7205952859829632912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5713147765351156729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4817df78354487b4a8a81f885aa9ec85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipList:
+  - {fileID: 8300000, guid: 43400dad756ee834c928726a6e231d22, type: 3}
+  - {fileID: 8300000, guid: f27ba3add33f7c842a6275bb6ee69518, type: 3}
+  - {fileID: 8300000, guid: 722620a675767344f89602da4a03b36b, type: 3}
+  - {fileID: 8300000, guid: 57ecefdaed903f94bba8b93c0f5c70b5, type: 3}
+  - {fileID: 8300000, guid: cb6a2a2f59d45a04ab37c9e000951f17, type: 3}
+  - {fileID: 8300000, guid: 4af287e6f1d05b7468340a5075716677, type: 3}
+  - {fileID: 8300000, guid: 5d7cb9b7a6283664a9a0fbec45891115, type: 3}
+  Output: {fileID: -4080297297996974732, guid: 2a477530eb31f7a4a9a683e273440809, type: 2}
+--- !u!114 &7221471127556741058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5713147765351156729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4817df78354487b4a8a81f885aa9ec85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipList:
+  - {fileID: 8300000, guid: 2993072f10ab4be42bd9a4deb43374eb, type: 3}
+  - {fileID: 8300000, guid: b1841a3378fccf748b991649f85abafe, type: 3}
+  Output: {fileID: -4080297297996974732, guid: 2a477530eb31f7a4a9a683e273440809, type: 2}
 --- !u!1 &5804439323783228309
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +959,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1323
+  m_VersionIndex: 1518
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1238,7 +1311,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 212
+  m_VersionIndex: 407
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
