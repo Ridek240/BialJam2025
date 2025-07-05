@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9213060341469963699}
   - component: {fileID: 9143466773182364546}
   m_Layer: 0
-  m_Name: Wall - A
+  m_Name: Wall - C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6755932630677174749}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 2, z: 5}
-  m_LocalScale: {x: 0.10000003, y: 2, z: 2}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -8.10083, y: 3.6715088, z: 6.0217633}
+  m_LocalScale: {x: 0.10000004, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9d20f8a82e7e6346b3e513bbf0e06e8, type: 2}
+  - {fileID: 2100000, guid: 62bffa4eea030b641bb657d0aae2d59b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
