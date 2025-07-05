@@ -3,8 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class RandomMover : MonoBehaviour
 {
-    public float speed = 1f;
     private Rigidbody rb;
+    public float speed = 1f;
 
     private void Start()
     {
@@ -17,7 +17,6 @@ public class RandomMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Jeśli obiekt się zatrzymał (np. po kolizji), wymuś ruch
         if (rb.linearVelocity.magnitude < 0.1f)
         {
             MoveInRandomDirection();
@@ -33,7 +32,6 @@ public class RandomMover : MonoBehaviour
         Vector3 normal = collision.contacts[0].normal;
         Vector3 reflected = Vector3.Reflect(rb.linearVelocity.normalized, normal);
 
-        // Jeśli reflected wektor jest zbyt mały, wymuś losowy kierunek
         if (reflected.magnitude < 0.1f)
         {
             MoveInRandomDirection();
