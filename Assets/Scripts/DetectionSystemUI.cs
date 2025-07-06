@@ -35,7 +35,7 @@ public class DetectionSystemUI : MonoBehaviour
 
         if (Modifier <= 0)
         {
-            Value -= 1 * Time.fixedDeltaTime;
+            Value -= 0.25f * Time.fixedDeltaTime;
             Value = Mathf.Max(Value, 0f);
         }
         else

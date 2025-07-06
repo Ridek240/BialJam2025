@@ -72,6 +72,7 @@ public class JawsScript : MonoBehaviour
     public void ThrowChild(float strength)
     {
         Target.GetComponent<Rigidbody>().AddForce(attackOrigin.forward * strength);
+        Target.GetComponent<DemonMover>().IWasThrown();
         ChildThrown?.Invoke();
         Jaws(false);
     }
