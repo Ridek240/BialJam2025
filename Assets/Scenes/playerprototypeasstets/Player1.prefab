@@ -172,6 +172,8 @@ GameObject:
   - component: {fileID: 5885700809502325516}
   - component: {fileID: 2653699185692453707}
   - component: {fileID: 2032991907071397783}
+  - component: {fileID: 8082138796635929157}
+  - component: {fileID: 1275790424264641416}
   m_Layer: 0
   m_Name: Player01_Head_Rig
   m_TagString: Untagged
@@ -218,10 +220,34 @@ MonoBehaviour:
   trigger: {fileID: 5174244977760033165}
   JawsClosed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8082138796635929157}
+        m_TargetAssemblyTypeName: SoundList, Assembly-CSharp
+        m_MethodName: PlayRandomSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   ChildThrown:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275790424264641416}
+        m_TargetAssemblyTypeName: SoundList, Assembly-CSharp
+        m_MethodName: PlayRandomSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &2032991907071397783
 Animator:
   serializedVersion: 7
@@ -244,6 +270,43 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8082138796635929157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993107200534673220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4817df78354487b4a8a81f885aa9ec85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipList:
+  - {fileID: 8300000, guid: 43400dad756ee834c928726a6e231d22, type: 3}
+  - {fileID: 8300000, guid: f27ba3add33f7c842a6275bb6ee69518, type: 3}
+  - {fileID: 8300000, guid: 722620a675767344f89602da4a03b36b, type: 3}
+  - {fileID: 8300000, guid: 57ecefdaed903f94bba8b93c0f5c70b5, type: 3}
+  - {fileID: 8300000, guid: cb6a2a2f59d45a04ab37c9e000951f17, type: 3}
+  - {fileID: 8300000, guid: 4af287e6f1d05b7468340a5075716677, type: 3}
+  - {fileID: 8300000, guid: 5d7cb9b7a6283664a9a0fbec45891115, type: 3}
+  Output: {fileID: -4080297297996974732, guid: 2a477530eb31f7a4a9a683e273440809, type: 2}
+--- !u!114 &1275790424264641416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993107200534673220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4817df78354487b4a8a81f885aa9ec85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipList:
+  - {fileID: 8300000, guid: 2993072f10ab4be42bd9a4deb43374eb, type: 3}
+  - {fileID: 8300000, guid: b1841a3378fccf748b991649f85abafe, type: 3}
+  Output: {fileID: -4080297297996974732, guid: 2a477530eb31f7a4a9a683e273440809, type: 2}
 --- !u!1 &1003211469129660383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,14 +1232,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4522993371363426916}
   serializedVersion: 2
-  m_LocalRotation: {x: 3.895823e-15, y: 0.000000059604645, z: -0.000000065361064, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -3.8184225e-10, y: -0.0114256935, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4137324632317917932}
   m_Father: {fileID: 1033335037772038853}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &4741964614654612631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,7 +1453,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 847a581c4c72aff47a445c98b336ce18, type: 3}
+  - {fileID: 2100000, guid: 1e69e4b19abbe2a4c9acd2c97a462d7d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1415,7 +1478,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 5407943576975338327, guid: 847a581c4c72aff47a445c98b336ce18, type: 3}
+  m_Mesh: {fileID: 5407943576975338327, guid: ee981872c831f674db0ad7bd72818275, type: 3}
   m_Bones:
   - {fileID: 3042346423217231484}
   - {fileID: 4137324632317917932}
@@ -1681,7 +1744,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 847a581c4c72aff47a445c98b336ce18, type: 3}
+  - {fileID: 2100000, guid: 1e69e4b19abbe2a4c9acd2c97a462d7d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1703,10 +1766,10 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_Quality: 0
+  m_Quality: 4
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -7789123013869612567, guid: 847a581c4c72aff47a445c98b336ce18, type: 3}
+  m_Mesh: {fileID: -7789123013869612567, guid: ee981872c831f674db0ad7bd72818275, type: 3}
   m_Bones:
   - {fileID: 1268449778943066536}
   - {fileID: 4138236073437232317}
