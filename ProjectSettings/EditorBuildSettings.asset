@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/player prototype.unity
     guid: 3ad0de6b480bc0142951d3c62c04aae3
   - enabled: 1
-    path: Assets/Scenes/Scene1.unity
+    path: Assets/Scenes/KinderGardenScene.unity
     guid: 172805fd14b7c224d9a48b98d1a580fc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
