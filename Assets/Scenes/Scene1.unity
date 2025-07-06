@@ -16141,6 +16141,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1049621485}
     m_Modifications:
+    - target: {fileID: 1077398913326475227, guid: 895b30096f0beb94fa5adf088cb17e35, type: 3}
+      propertyPath: m_Range
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077398913326475227, guid: 895b30096f0beb94fa5adf088cb17e35, type: 3}
+      propertyPath: m_Intensity
+      value: 20.97
+      objectReference: {fileID: 0}
     - target: {fileID: 1321803335291489766, guid: 895b30096f0beb94fa5adf088cb17e35, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.011156
@@ -16180,6 +16188,14 @@ PrefabInstance:
     - target: {fileID: 1321803335291489766, guid: 895b30096f0beb94fa5adf088cb17e35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5592996871056827844, guid: 895b30096f0beb94fa5adf088cb17e35, type: 3}
+      propertyPath: m_Radius
+      value: 10.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574575548042390210, guid: 895b30096f0beb94fa5adf088cb17e35, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.27
       objectReference: {fileID: 0}
     - target: {fileID: 7914767734756695378, guid: 895b30096f0beb94fa5adf088cb17e35, type: 3}
       propertyPath: m_Name
@@ -20513,7 +20529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3657145747374585139, guid: dd5b6bd721c28ec4cb046ab49c3e712d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -720
+      value: -720.02
       objectReference: {fileID: 0}
     - target: {fileID: 3657145747374585139, guid: dd5b6bd721c28ec4cb046ab49c3e712d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37967,33 +37983,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1641190992}
     m_Modifications:
-    - target: {fileID: 621480488058018876, guid: 17b79ca822805474fa4c7ce6cc1ae100, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376677877615145313, guid: 17b79ca822805474fa4c7ce6cc1ae100, type: 3}
-      propertyPath: m_Radius
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1510323916306625578, guid: 17b79ca822805474fa4c7ce6cc1ae100, type: 3}
-      propertyPath: m_Range
-      value: 2.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 1510323916306625578, guid: 17b79ca822805474fa4c7ce6cc1ae100, type: 3}
-      propertyPath: m_BounceIntensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4247372785673204430, guid: 17b79ca822805474fa4c7ce6cc1ae100, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6501468931639086502, guid: 17b79ca822805474fa4c7ce6cc1ae100, type: 3}
       propertyPath: m_Name
       value: LunchRoom
-      objectReference: {fileID: 0}
-    - target: {fileID: 7004735473721682598, guid: 17b79ca822805474fa4c7ce6cc1ae100, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8832461951343847676, guid: 17b79ca822805474fa4c7ce6cc1ae100, type: 3}
       propertyPath: m_LocalPosition.x

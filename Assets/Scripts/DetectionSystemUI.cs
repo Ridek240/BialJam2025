@@ -35,12 +35,12 @@ public class DetectionSystemUI : MonoBehaviour
 
         if (Modifier <= 0)
         {
-            Value -= 0.25f * Time.fixedDeltaTime;
+            Value -= 0.01f * Time.fixedDeltaTime;
             Value = Mathf.Max(Value, 0f);
         }
         else
         {
-            Value += Modifier * Time.fixedDeltaTime;
+            Value += Modifier* 2 * Time.fixedDeltaTime;
             if(Value >= MAXValue)
             {
                 PlayerLost?.Invoke();
