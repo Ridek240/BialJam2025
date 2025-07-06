@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class SimpleMover : MonoBehaviour
+public class SimpleZMover : MonoBehaviour
 {
     public float speed = 3f;
 
@@ -21,7 +21,6 @@ public class SimpleMover : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Odbicie — zmiana kierunku na przeciwny
         moveDirection = -moveDirection;
     }
 }
