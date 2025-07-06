@@ -698,7 +698,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<size=30%>Black Ops:</size>
 
-    GORBEREK'
+    GOREBEREK'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f90b95ba1e6ee14daf3c91a6dd30b8a, type: 2}
   m_sharedMaterial: {fileID: -8779264598428362537, guid: 2f90b95ba1e6ee14daf3c91a6dd30b8a, type: 2}
