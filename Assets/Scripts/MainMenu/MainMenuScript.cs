@@ -17,7 +17,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void OnStart()
     {
-        SceneManager.LoadScene("player prototype");
+        SceneManager.LoadScene("Scene1");
     }
 
     public void Quit()

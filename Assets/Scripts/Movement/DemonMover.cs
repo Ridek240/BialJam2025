@@ -54,7 +54,7 @@ public class DemonMover : MonoBehaviour
 
     void MoveInRandomDirection()
     {
-        Vector3 dir = new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f)).normalized;
+        Vector3 dir = new Vector3(Random.Range(-1f, 1f), rb.linearVelocity.y, Random.Range(-1f, 1f)).normalized;
         rb.linearVelocity = dir * speed;
     }
 }

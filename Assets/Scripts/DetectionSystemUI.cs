@@ -1,7 +1,8 @@
-using NUnit.Framework;
 using System.Collections.Generic;
-using System.IO;
+using TMPro;
+using UnityEditor.Networking.PlayerConnection;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DetectionSystemUI : MonoBehaviour
@@ -15,6 +16,13 @@ public class DetectionSystemUI : MonoBehaviour
     public static DetectionSystemUI instance;
 
     List<LightDetection> lightDetections = new List<LightDetection>();
+    public List<ChildHibox> Children = new List<ChildHibox>();
+
+
+    public UnityEvent PlayerLost;
+    public UnityEvent PlayerWon;
+
+    public TextMeshProUGUI ChildrenLeft;
     
     public void FixedUpdate()
     {
@@ -33,6 +41,10 @@ public class DetectionSystemUI : MonoBehaviour
         else
         {
             Value += Modifier * Time.fixedDeltaTime;
+            if(Value >= MAXValue)
+            {
+                PlayerLost?.Invoke();
+            }
             Value = Mathf.Clamp(Value, 0f, MAXValue);
         }
 
@@ -54,9 +66,26 @@ public class DetectionSystemUI : MonoBehaviour
             lightDetections.Add(lightDetection);
         }
     }
-    // Update is called once per frame
-    void Update()
+
+    public void AddChildToList(ChildHibox childHibox)
     {
-        
+        if (childHibox != null && !Children.Contains(childHibox))
+        {
+            Children.Add(childHibox);
+            ChildrenLeft.text = $"Children Left: \n {Children.Count}";
+        }
+    }
+
+    public void RemoveChildToList(ChildHibox childHibox)
+    {
+        if (childHibox != null)
+        {
+            Children.Remove(childHibox);
+            ChildrenLeft.text = $"Children Left: \n {Children.Count}";
+            if(Children.Count<=0)
+            {
+                PlayerWon?.Invoke();
+            }
+        }
     }
 }
