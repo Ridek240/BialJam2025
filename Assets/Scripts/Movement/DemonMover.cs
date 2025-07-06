@@ -1,16 +1,25 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class RandomMover : MonoBehaviour
+public class DemonMover : MonoBehaviour
 {
     private Rigidbody rb;
-    public float speed = 1f;
+
+    [Header("Ruch")]
+    public float minSpeed = 1f;
+    public float maxSpeed = 3f;
+    private float speed;
+
+    [Header("Obrót")]
+    public float rotationSpeed = 180f; // stopni/sekundê
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
         rb.freezeRotation = true;
+
+        speed = Random.Range(minSpeed, maxSpeed);
 
         MoveInRandomDirection();
     }
@@ -24,6 +33,7 @@ public class RandomMover : MonoBehaviour
         else
         {
             rb.linearVelocity = rb.linearVelocity.normalized * speed;
+            transform.Rotate(0f, rotationSpeed * Time.fixedDeltaTime, 0f);
         }
     }
 
