@@ -17,7 +17,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void OnStart()
     {
-        SceneManager.LoadScene("Scene1");
+        SceneManager.LoadScene("KinderGardenScene");
     }
 
     public void Quit()

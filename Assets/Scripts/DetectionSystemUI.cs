@@ -11,7 +11,7 @@ public class DetectionSystemUI : MonoBehaviour
     public float MAXValue = 100;
     public float Value = 0;
     public int Modifier = 0;
-
+    private int ChildBuffor = 17;
     public static DetectionSystemUI instance;
 
     List<LightDetection> lightDetections = new List<LightDetection>();
@@ -34,12 +34,12 @@ public class DetectionSystemUI : MonoBehaviour
 
         if (Modifier <= 0)
         {
-            Value -= 0.01f * Time.fixedDeltaTime;
+            Value -= 0.1f * Time.fixedDeltaTime;
             Value = Mathf.Max(Value, 0f);
         }
         else
         {
-            Value += Modifier* 2 * Time.fixedDeltaTime;
+            Value += Modifier* 1.65f * Time.fixedDeltaTime;
             if(Value >= MAXValue)
             {
                 PlayerLost?.Invoke();
@@ -71,7 +71,7 @@ public class DetectionSystemUI : MonoBehaviour
         if (childHibox != null && !Children.Contains(childHibox))
         {
             Children.Add(childHibox);
-            ChildrenLeft.text = $"Children Left: \n {Children.Count}";
+            ChildrenLeft.text = $"Children Left: \n {Children.Count - ChildBuffor}";
         }
     }
 
@@ -80,8 +80,8 @@ public class DetectionSystemUI : MonoBehaviour
         if (childHibox != null)
         {
             Children.Remove(childHibox);
-            ChildrenLeft.text = $"Children Left: \n {Children.Count}";
-            if(Children.Count<=0)
+            ChildrenLeft.text = $"Children Left: \n {Children.Count - ChildBuffor}";
+            if(Children.Count- ChildBuffor <= 0)
             {
                 PlayerWon?.Invoke();
             }
